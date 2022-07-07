@@ -1,0 +1,30 @@
+{
+	"name": "forkify",
+	"version": "1.0.0",
+	"description": "forkify app",
+	"main": "index.js",
+	"scripts": {
+		"compile:sass": "node-sass main.scss style.css -w",
+		"dev": "webpack --mode development",
+		"build": "webpack --mode production",
+		"start": "webpack-dev-server --mode development --open"
+	},
+	"author": "ezomon glory",
+	"license": "ISC",
+	"devDependencies": {
+		"node-sass": "^6.0.1",
+		"webpack": "^5.70.0",
+		"webpack-cli": "^4.9.2",
+		"webpack-dev-server": "^4.7.4"
+	},
+	"dependencies": {
+		"axios": "^0.26.1",
+		"concat": "^1.0.3",
+		"fractional": "^1.0.0",
+		"node.js": "^0.0.1-security",
+		"nodemailer": "^6.7.2",
+		"postcss": "^8.4.5",
+		"postcss-cli": "^9.1.0",
+		"uniqid": "^5.4.0"
+	}
+}
