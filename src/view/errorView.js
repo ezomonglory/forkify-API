@@ -10,7 +10,7 @@ export const error = (parent, err) => {
             <div>
               <i class="fa-solid fa-triangle-exclamation fa-5x" ></i>
             </div>
-            <p>${eror}. Please try again!</p>
+            <p>${eror}. Please try searching for pasta, fish, tomato etc...</p>
           </div>
 
     `
