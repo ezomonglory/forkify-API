@@ -23,6 +23,12 @@ const controlSearch = async () => {
 		searchView.clearResults();
 		renderLoader(elements.searchRes);
 
+        // for mobile devices lets lets make ingredients none
+        document.querySelector(".recipe").classList.add("d-none")
+        document.querySelector(".search-results").classList.remove("d-none")
+        
+
+
 		try {
 			//4) Search for recipes
 			var err = await state.search.getResult();
@@ -88,7 +94,11 @@ const controlRecipe = async () => {
 // window.addEventHListener("load", controlRecipe)
 
 ["hashchange", "load"].forEach((event) => {
-	window.addEventListener(event, controlRecipe);
+	window.addEventListener(event, ()=> {
+        controlRecipe()
+        document.querySelector(".recipe").classList.remove("d-none")
+        document.querySelector(".search-results").classList.add("d-none")
+    });    
 });
 
 // List Controller
@@ -186,3 +196,22 @@ window.addEventListener("load", () => {
 	});
 });
 
+
+const rec = document.querySelector(".rec")
+const ing = document.querySelector(".ing")
+
+ing.addEventListener("click", ()=> {    
+    document.querySelector(".search-results").classList.add("d-none")
+    document.querySelector(".recipe").classList.remove("d-none")
+})
+
+
+rec.addEventListener("click", ()=> {
+    document.querySelector(".recipe").classList.add("d-none")
+    document.querySelector(".search-results").classList.remove("d-none")
+})
+
+
+document.querySelector(".nav__btn--bookmarks").addEventListener("click", ()=> {
+    document.querySelector(".bookmarks").classList.toggle("show")
+})

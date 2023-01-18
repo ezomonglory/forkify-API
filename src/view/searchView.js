@@ -83,6 +83,15 @@ const renderButtons = (page, numResult, resPerPage) => {
 }
 
 
+// document.querySelectorAll(".preview").forEach((item)=> {          
+//     item.addEventListener("click", (e)=> {
+//         alert("item clicked")
+//         console.log(e.target)
+//         document.querySelector(".search-results").classList.add("d-none")
+//         document.querySelector(".recipe").classList.remove("d-none")
+//     })
+// })
+
 
 
 
