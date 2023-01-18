@@ -98,6 +98,8 @@ const controlRecipe = async () => {
         controlRecipe()
         document.querySelector(".recipe").classList.remove("d-none")
         document.querySelector(".search-results").classList.add("d-none")
+        document.querySelector(".bookmarks").classList.remove("show")
+
     });    
 });
 
@@ -203,12 +205,15 @@ const ing = document.querySelector(".ing")
 ing.addEventListener("click", ()=> {    
     document.querySelector(".search-results").classList.add("d-none")
     document.querySelector(".recipe").classList.remove("d-none")
+    document.querySelector(".bookmarks").classList.remove("show")
+
 })
 
 
 rec.addEventListener("click", ()=> {
     document.querySelector(".recipe").classList.add("d-none")
     document.querySelector(".search-results").classList.remove("d-none")
+    document.querySelector(".bookmarks").classList.remove("show")
 })
 
 
