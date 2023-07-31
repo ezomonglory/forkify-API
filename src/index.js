@@ -1,3 +1,4 @@
+
 import { Search } from "./module/Search";
 import { elements, renderLoader, clearLoader } from "./view/dom";
 import * as searchView from "./view/searchView";
